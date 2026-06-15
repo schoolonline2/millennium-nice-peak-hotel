@@ -1,0 +1,72 @@
+{
+  "name": "millennium-hotel",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.372.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.11"
+  }
+}
+
+
+#### 2. `vite.config.js` (Save in `millennium-hotel/`)
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+
+
+#### 3. `src/index.css` (Save in `millennium-hotel/src/`)
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-[#0a0a0a] text-neutral-100; }
+}
+
+
+#### 4. `src/main.jsx` (Save in `millennium-hotel/src/`)
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+
+---
+
+### Deploying to Netlify
+Once you have created these files on your computer:
+1.  **Upload to GitHub:** Create a new repository on GitHub and upload these files (including the `App.jsx` file I provided earlier).
+2.  **Connect to Netlify:**
+    * Go to [Netlify](https://app.netlify.com/).
+    * Click **"Add new site"** -> **"Import from Git"**.
+    * Select your GitHub repository.
+    * Netlify will automatically detect it's a Vite project. Set the build command to `npm run build` and the publish directory to `dist`.
+    * Click **Deploy**.
+
+This will give you a live website link immediately!
