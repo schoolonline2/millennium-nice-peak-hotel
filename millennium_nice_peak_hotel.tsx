@@ -1274,3 +1274,11 @@ function AdminDashboard({ bookings, rooms }) {
     </div>
   );
 }
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+const supabaseClient = supabase.createClient(
+  "https://mpuqiptrfonxbtrhtnmn.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1wdXFpcHRyZm9ueGJ0cmh0bm1uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE0NzI2MjgsImV4cCI6MjA5NzA0ODYyOH0.oOcK7u-xlwyBhTCWiveIFJxZorp8YY3f82tcOjOWg7U"
+);
+</script>
